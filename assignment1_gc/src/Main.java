@@ -8,9 +8,9 @@ public class Main {
 		Scanner scanner = null;
 		// Scanner scanner = new Scanner(System.in);
 		try {
-			for(int size = 0; size < 2; size++) {
-				for (int num = 1; num < 7; num++) {
-					String file = (size == 0 ? "small" : "big") + "_" + num;
+			for(int size = 0; size < 3; size++) {
+				for (int num = 1; num < (size != 2 ? 7 : 9); num++) {
+					String file = (size == 0 ? "small" : (size == 1 ? "big" : "extra")) + "_" + num;
 					scanner = new Scanner(new File(file + ".in"));
 					String[] firstLine = scanner.nextLine().split(" ");
 					int n = Integer.valueOf(firstLine[0]);
