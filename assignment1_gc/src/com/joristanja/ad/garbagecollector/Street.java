@@ -1,4 +1,10 @@
+package com.joristanja.ad.garbagecollector;
 
+/**
+ * A street from one intersection to another
+ * @author Joris van Vugt & Tanja Crijns
+ *
+ */
 public class Street {
 	private Intersection a;
 	private Intersection b;
