@@ -78,10 +78,7 @@ int main()
 	int n, m, k;
 	std::cin >> n >> m >> k;
 	std::vector<Intersection*> city(m);
-	for (int i = 0; i < m; i++)
-	{
-		city[i] = new Intersection();
-	}
+
 	while (n-- > 0)
 	{
 		int a, b;
