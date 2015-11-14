@@ -47,7 +47,7 @@ public class Main {
 			for(int size = 0; size < 3; size++) {
 				for (int num = 1; num < (size != 2 ? 7 : 9); num++) {
 					String file = (size == 0 ? "small" : (size == 1 ? "big" : "extra")) + "_" + num;
-					scanner = new Scanner(new File("test_samples/" + file + ".in"));
+					scanner = new Scanner(new File("../test_samples/" + file + ".in"));
 					String[] firstLine = scanner.nextLine().split(" ");
 					int n = Integer.valueOf(firstLine[0]);
 					int m = Integer.valueOf(firstLine[1]);
@@ -60,7 +60,7 @@ public class Main {
 					
 					BinPlacer bp =  new BinPlacer(nijmegen, k);
 					
-					scanner = new Scanner(new File("test_samples/" + file + ".out"));
+					scanner = new Scanner(new File("../test_samples/" + file + ".out"));
 					String out = scanner.nextLine();
 					boolean isPossible = bp.canPlaceAllBins();
 					if (out.equals("possible") && isPossible || out.equals("impossible") && !isPossible) {
