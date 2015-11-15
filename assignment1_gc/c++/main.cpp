@@ -27,12 +27,7 @@ bool LeastNeighbours(const Intersection* i, const Intersection* j)
 
 bool CanPlaceBins(std::vector<Intersection*>& city, int n_bins)
 {
-	if (n_bins == 0)
-	{
-		return true;
-	}
-
-	std::sort(city.begin(), city.end(), LeastNeighbours);
+	std::stable_sort(city.begin(), city.end(), LeastNeighbours);
 
 	for (unsigned i = 0; i < city.size(); i++)
 	{
